@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verbatim: check every quotation against its source</title>
+<meta name="description" content="Verbatim is a Mac app that finds every quotation in your manuscript and checks it, word by word, against the PDFs and EPUBs it comes from: changed words, silent omissions, wrong pages and wrong sources. No AI, nothing uploaded.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Verbatim">
+<meta property="og:description" content="Check every quotation in your manuscript against its source, word by word. No AI, nothing uploaded.">
+<meta property="og:image" content="https://victorshammas.com/verbatim/icon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt="" width="30" height="30">Verbatim</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#catches" class="hide-sm">What it catches</a>
+      <a href="#privacy" class="hide-sm">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <img class="hero-icon" src="icon.png" alt="Verbatim app icon" width="96" height="96">
+        <h1>Check every quotation against its source.</h1>
+        <p class="lede">Verbatim finds the quotations in your manuscript and compares each one, word by word, with the PDF or EPUB it comes from. It catches the changed word, the dropped “not”, the wrong page and the quotation from the wrong book, before a reviewer does.</p>
+        <div class="cta-row">
+          <!-- At launch, replace with: <a class="btn" href="https://apps.apple.com/app/idAPP_ID">Download on the Mac App Store <small>Free to try</small></a> (see README.md). -->
+          <span class="btn" aria-disabled="true">Coming soon to the Mac App Store <small>Free to try</small></span>
+          <span class="fineprint">For the Mac · macOS 14 or later · No AI, nothing uploaded</span>
+        </div>
+      </div>
+
+      <figure class="compare" role="img" aria-label="Illustration of Verbatim comparing a quotation with its source">
+        <div class="head"><span class="pill bad">▲ Altered</span><span class="count">2 of 9</span></div>
+        <p class="sum">The wording differs from the source.</p>
+        <div class="cols">
+          <div><h4>Manuscript</h4><p>Over himself, over his own body and mind, the individual is <mark>supreme</mark></p></div>
+          <div><h4>Source</h4><p>Over himself, over his own body and mind, the individual is <mark>sovereign.</mark></p></div>
+        </div>
+        <p class="src">Found in Mill 1859 – On Liberty, p. 11 · cited as “Mill 1859, 11”</p>
+        <ul class="list">
+          <li><b class="ok">✓</b> Exact · Mill 1859, 10</li>
+          <li><b class="badc">▲</b> Word left out without an ellipsis: “always” · Du Bois 1903, 4</li>
+          <li><b class="warn">●</b> Wrong page: found on p. 4, cited as p. 14 · Mill 1859</li>
+        </ul>
+        <p class="demo">From the sample essay that comes with the app</p>
+      </figure>
+    </div>
+  </section>
+
+  <section id="catches">
+    <div class="wrap">
+      <h2>What it catches</h2>
+      <p class="section-lede">Every quotation gets a verdict, with the difference highlighted and the passage shown in its source.</p>
+      <div class="grid">
+        <div class="card"><h3>Changed words</h3><p>A word swapped, added or dropped. A lost “not”, a changed number or “likely” for “unlikely” is marked as possibly changing the meaning.</p></div>
+        <div class="card"><h3>Silent omissions</h3><p>Words left out without an ellipsis, shown exactly where they went missing.</p></div>
+        <div class="card"><h3>Wrong page</h3><p>The passage is on page 121, and you cited page 112. Verbatim reads the printed page numbers, not the PDF’s.</p></div>
+        <div class="card"><h3>Wrong source</h3><p>The quotation is from a different book than the one cited, perhaps one that was open next to it.</p></div>
+        <div class="card"><h3>Quoted secondhand</h3><p>The source is itself quoting someone else, so the citation should probably say “quoted in”.</p></div>
+        <div class="card"><h3>Not in the source at all</h3><p>A paraphrase that has drifted into quotation marks, or a quotation whose source isn’t in your folder.</p></div>
+      </div>
+      <p style="margin-top:22px">What it doesn’t flag: omissions marked with an ellipsis, changes in [brackets], a capital letter changed at the start, end punctuation, and typography such as curly quotes, dashes, ligatures and line breaks.</p>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="section-lede">Two things to choose, then a list of what needs your attention.</p>
+      <div class="steps">
+        <div class="card"><h3>Choose your manuscript</h3><p>A Word document, Markdown, RTF or plain text. Footnotes, endnotes, block quotations, <em>Ibid.</em> and author–date citations are all read.</p></div>
+        <div class="card"><h3>Add your sources</h3><p>A folder of PDFs and EPUBs, even one with many works you didn’t cite, or a Zotero library or collection. Each citation is matched to its file by author and year.</p></div>
+        <div class="card"><h3>Review and fix</h3><p>Go through what needs attention, see each passage in its source, and copy the source’s wording. Or save a copy of your Word file with a comment on each quotation to fix.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reads">
+    <div class="wrap">
+      <h2>Reads sources the way they really are</h2>
+      <div class="grid">
+        <div class="card"><h3>Real page numbers</h3><p>Printed page numbers from journal articles and books, with running heads and page numbers taken out of the text.</p></div>
+        <div class="card"><h3>Messy PDFs</h3><p>Words hyphenated across lines, lost “fi” and “fl” ligatures, and footnotes in the middle of a quotation that runs over a page.</p></div>
+        <div class="card"><h3>Scanned pages</h3><p>Pages without text are read with the Mac’s own text recognition, on your Mac.</p></div>
+        <div class="card"><h3>EPUBs</h3><p>With the print edition’s page numbers, when the EPUB has them.</p></div>
+        <div class="card"><h3>Zotero</h3><p>Point Verbatim at your Zotero folder and pick a collection. Citations are matched by each item’s authors and year, whatever the files are called.</p></div>
+        <div class="card"><h3>Your drafts</h3><p>Mark a quotation as reviewed and it stays out of the way next time. Check again after editing, and Verbatim keeps your place.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="privacy">
+    <div class="wrap">
+      <h2>No AI, nothing uploaded</h2>
+      <p class="section-lede">Verbatim compares text, word by word, on your Mac. The same manuscript and sources always give the same result, and every verdict comes with the evidence. The app has no network access at all.</p>
+      <ul class="checks">
+        <li>No AI and no guessing</li>
+        <li>No network connections, ever</li>
+        <li>No account, no sign-in</li>
+        <li>No analytics, tracking or ads</li>
+        <li>Reads only the files you choose</li>
+        <li>Sandboxed, native Mac app</li>
+      </ul>
+      <p style="margin-top:22px"><a href="privacy.html">Read the full privacy policy</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap narrow">
+      <h2>Free to try</h2>
+      <p>Verbatim is free to download. The free version checks every quotation and shows full results for the first 20 of any manuscript. A one-time purchase unlocks the results for all of them, and the exports. No subscription.</p>
+      <p>The app also comes with a short sample essay, quoting Mill, Du Bois and Wollstonecraft with a few planted mistakes, so you can see what it does before using it on your own work.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap narrow">
+      <h2>Requirements</h2>
+      <ul>
+        <li>A Mac with macOS 14 Sonoma or later.</li>
+        <li>Your manuscript as a Word (.docx), Markdown, RTF, OpenDocument or plain-text file.</li>
+        <li>Your sources as PDFs, EPUBs, web pages or text files, or in a Zotero library.</li>
+      </ul>
+      <p>Questions? See <a href="support.html">Support &amp; FAQ</a>.</p>
+    </div>
+  </section>
+</main>
+
+<section class="app-bar" aria-label="Apps by Victor Shammas">
+  <div class="wrap">
+    <div class="app-bar-head">
+      <p class="app-bar-title"><a href="https://victorshammas.com/apps/">Small, private apps by Victor Shammas</a></p>
+      <p class="app-bar-coffee">Enjoying one of these apps? <a href="https://buymeacoffee.com/victorshammas">Buy me a coffee</a>.</p>
+    </div>
+    <div class="app-tiles">
+      <a class="app-tile" href="https://victorshammas.com/plainview/"><img src="https://victorshammas.com/plainview/icon.png" alt="" width="44" height="44"><span><strong>Plainview</strong><small>A Markdown reader for the Mac</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/gaugeline/"><img src="https://victorshammas.com/gaugeline/icon.png" alt="" width="44" height="44"><span><strong>Gaugeline</strong><small>AI usage limits in your menu bar</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/quoth/"><img src="https://victorshammas.com/quoth/icon.png" alt="" width="44" height="44"><span><strong>Quoth</strong><small>Local voice transcription</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/staple/"><img src="https://victorshammas.com/staple/icon.png" alt="" width="44" height="44"><span><strong>Staple</strong><small>Substack, stapled together</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/claude-usage-meter/"><img src="https://victorshammas.com/claude-usage-meter/icon.png" alt="" width="44" height="44"><span><strong>Claude Usage Meter</strong><small>Claude limits, free and open source</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/lectern/"><img src="https://victorshammas.com/lectern/icon.png" alt="" width="44" height="44"><span><strong>Lectern</strong><small>A presenter view for HTML slides</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/commonplace/"><img src="https://victorshammas.com/commonplace/icon.png" alt="" width="44" height="44"><span><strong>Commonplace</strong><small>Save links to Apple Notes</small></span></a>
+      <a class="app-tile current" aria-current="page" href="https://victorshammas.com/verbatim/"><img src="https://victorshammas.com/verbatim/icon.png" alt="" width="44" height="44"><span><strong>Verbatim</strong><small>Check quotations against sources</small><em>You’re here</em></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="mailto:contact+verbatim@victorshammas.com">Contact</a><a href="https://buymeacoffee.com/victorshammas">Buy me a coffee</a></nav>
+    <p>Verbatim is an independent app. Mac and Mac App Store are trademarks of Apple Inc. Microsoft Word is a trademark of Microsoft Corporation. Zotero is a trademark of the Corporation for Digital Scholarship. None of them is affiliated with or endorses Verbatim.</p>
+    <p>© 2026 Victor Shammas</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verbatim Support</title>
+<meta name="description" content="Help with Verbatim: choosing a manuscript and sources, naming files, what the verdicts mean, citations, page numbers, scanned PDFs, Zotero, Word comments and the free version.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt="" width="30" height="30">Verbatim</a>
+    <nav class="nav" aria-label="Main">
+      <a href="./" class="hide-sm">Home</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap narrow">
+    <h1>Support</h1>
+    <p>Something not working, or a result you don’t understand? The answers below cover most things. If not, email <a href="mailto:contact+verbatim@victorshammas.com?subject=Verbatim%20support">contact+verbatim@victorshammas.com</a>. I read every message.</p>
+    <ul class="toc">
+      <li><a href="#start">Getting started</a></li>
+      <li><a href="#verdicts">What the verdicts mean</a></li>
+      <li><a href="#citations">Citations and file names</a></li>
+      <li><a href="#sources">PDFs, EPUBs and scanned pages</a></li>
+      <li><a href="#zotero">Zotero</a></li>
+      <li><a href="#fixing">Fixing quotations</a></li>
+      <li><a href="#free">The free version</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <h2 id="start">Getting started</h2>
+    <details open>
+      <summary>How do I check a manuscript?</summary>
+      <p>Open Verbatim, choose your manuscript, add the folder (or folders) with your sources, and click <em>Check Quotations</em>. You can also drag files and folders onto the window. The first time, Verbatim reads every source, which takes a few seconds for a typical folder; it keeps what it read, so later checks are quick.</p>
+      <p>To see what it does first, choose <em>Help › Try the Sample</em>: a short essay quoting Mill, Du Bois and Wollstonecraft, with a few planted mistakes.</p>
+    </details>
+    <details>
+      <summary>Which files can I use?</summary>
+      <p><strong>Manuscript:</strong> Word (.docx), Markdown, plain text, RTF, OpenDocument (.odt), .doc or HTML. Footnotes and endnotes are read from Word and Markdown files.</p>
+      <p><strong>Sources:</strong> PDFs, EPUBs, web pages saved as HTML, plain text and Word files, or the attachments in a Zotero library. A folder can hold many works you didn’t cite: Verbatim matches each citation to its file and searches the rest only if a passage isn’t in the cited work.</p>
+      <p>LaTeX manuscripts aren’t read yet. Export to Word or Markdown first, for example with pandoc.</p>
+    </details>
+    <details>
+      <summary>What counts as a quotation?</summary>
+      <p>A passage in quotation marks (double, or single in British-style manuscripts) of four or more words, and any block quotation (a Word “Quote” or “Block Text” style, an indented paragraph, or a Markdown <code>&gt;</code> line). Shorter quoted phrases are usually scare quotes, terms or titles and are skipped; you can change the minimum in <em>Verbatim › Settings</em>.</p>
+    </details>
+    <details>
+      <summary>It found no quotations.</summary>
+      <p>Check that the quotations are in quotation marks or set as block quotations, and that the manuscript isn’t a PDF (Verbatim reads manuscripts as Word, Markdown or text files). Quotations after a heading such as “References” or “Bibliography” aren’t searched.</p>
+    </details>
+
+    <h2 id="verdicts">What the verdicts mean</h2>
+    <ul class="verdicts">
+      <li><strong>Exact.</strong> Word for word, apart from typography: curly or straight quotes, dashes, ligatures, line breaks.</li>
+      <li><strong>Acceptable changes.</strong> Only changes conventions allow: omissions marked with an ellipsis, changes in [brackets], a capital letter changed at the start, and end punctuation.</li>
+      <li><strong>Minor differences.</strong> Punctuation, capitalisation, spelling or spacing differs inside the quotation.</li>
+      <li><strong>Altered.</strong> Words added, dropped or changed. A dropped “not”, a changed number or a reversed word (“likely”/“unlikely”) is marked as possibly changing the meaning.</li>
+      <li><strong>Not found.</strong> The passage isn’t in the cited source or any other source you added. If a passage shares at least half its words, it’s shown as the closest match.</li>
+      <li><strong>Source not supplied.</strong> The citation names a work that isn’t among your sources.</li>
+    </ul>
+    <p>Some quotations also carry a flag: <strong>Wrong page</strong>, <strong>Wrong source</strong> (found in a different work from the one cited), <strong>Source is quoting</strong> (the source itself has the passage in quotation marks, so you may need “quoted in”), <strong>No page cited</strong> and <strong>Source has no page numbers</strong>.</p>
+    <details>
+      <summary>Why “Altered” when I only changed one small word?</summary>
+      <p>Because a quotation should be word for word. Verbatim shows exactly what differs; whether it matters is up to you. If a change is deliberate (for example, modernised spelling), mark the quotation as reviewed with <kbd>⌘K</kbd> and it stays out of the list.</p>
+    </details>
+    <details>
+      <summary>Could a scanned source cause false alarms?</summary>
+      <p>Yes. Text recognition sometimes misreads a letter. When a source was read that way, Verbatim says so next to the result, so you can check the page itself with <em>Show in Source</em>.</p>
+    </details>
+
+    <h2 id="citations">Citations and file names</h2>
+    <details open>
+      <summary>How does Verbatim know which source a quotation comes from?</summary>
+      <p>It reads the citation next to the quotation and matches it to your files by author and year. It understands author–date citations like <code>(Scott 1998, 87)</code>, <code>(Scott 1998: 87–89)</code> and <code>Scott (1998)</code>, a page number on its own (the same work as before), footnotes like <code>James C. Scott, Seeing Like a State (New Haven: Yale University Press, 1998), 87.</code>, <em>Ibid.</em>, and Pandoc keys like <code>[@scott1998, 87]</code>.</p>
+    </details>
+    <details>
+      <summary>How should I name my files?</summary>
+      <p>With the author’s surname and the year, for example <code>Scott 1998 – Seeing Like a State.pdf</code> or <code>Greene &amp; Dalke 2021 – You’re Still an Angry Man.pdf</code>. If a file name doesn’t match its citation, Verbatim still searches the file, and tells you the citation wasn’t matched. With Zotero, file names don’t matter.</p>
+    </details>
+    <details>
+      <summary>Can I keep my manuscript in the same folder as my sources?</summary>
+      <p>Yes. Verbatim never uses the manuscript as a source, and skips files that look like earlier drafts of it (Word, Markdown or text files holding most of its quotations).</p>
+    </details>
+
+    <h2 id="sources">PDFs, EPUBs and scanned pages</h2>
+    <details>
+      <summary>The page numbers are wrong for one of my PDFs.</summary>
+      <p>Verbatim reads the printed page numbers from the page margins (for example 291 to 354 in a journal article), and uses the file’s own page labels when they’re meaningful. A few PDFs have neither, such as unpaginated web reports; then the page check is skipped and the result says so. If you think a PDF’s pages are read wrongly, please email me the details.</p>
+    </details>
+    <details>
+      <summary>My source is an EPUB. Can it check pages?</summary>
+      <p>Yes, if the EPUB carries the print edition’s page numbers, as many publishers’ EPUBs do. Otherwise Verbatim shows the chapter instead and notes that the page couldn’t be checked.</p>
+    </details>
+    <details>
+      <summary>What about scanned PDFs?</summary>
+      <p>Pages without text are read with the Mac’s built-in text recognition. It runs on your Mac, takes a few seconds a page the first time, and the result is kept for next time. You can turn it off in <em>Verbatim › Settings</em>.</p>
+    </details>
+    <details id="access">
+      <summary>Verbatim says it isn’t allowed to read a file.</summary>
+      <p>Verbatim can read only the files and folders you choose (a Mac App Store rule). A link or alias to a file elsewhere isn’t covered: add the original file, or its folder, instead.</p>
+    </details>
+
+    <h2 id="zotero">Zotero</h2>
+    <details>
+      <summary>How do I check against my Zotero library?</summary>
+      <p>Click <em>Add Zotero Library…</em> and choose your Zotero data folder (usually <code>Zotero</code> in your home folder; it contains <code>zotero.sqlite</code>). Then pick the whole library or a collection; a collection includes its subcollections. Zotero can stay open.</p>
+    </details>
+    <details>
+      <summary>Some of my Zotero items are missing.</summary>
+      <p>Verbatim reads PDF, EPUB and snapshot attachments stored in Zotero. Attachments that haven’t been downloaded to this Mac, and linked files stored outside the Zotero folder, can’t be read; they’re listed under “files not used” in the results.</p>
+    </details>
+
+    <h2 id="fixing">Fixing quotations</h2>
+    <details>
+      <summary>What’s the fastest way to fix everything?</summary>
+      <p>Go through <em>To Review</em> with the arrow keys. <kbd>Space</kbd> shows the passage in its source; <em>Copy Source Text</em> copies the source’s wording. For a Word manuscript, <em>Export › Word Copy with Comments</em> saves a copy of your document with a comment on each quotation to fix, anchored to the quoted words. Then fix them in Word and choose <em>Check Again</em> (<kbd>⌘R</kbd>): Verbatim keeps your place.</p>
+    </details>
+    <details>
+      <summary>Does Verbatim change my manuscript?</summary>
+      <p>No. It only reads it. The Word copy with comments is a new file; your original isn’t touched.</p>
+    </details>
+    <details>
+      <summary>Can I check translated quotations?</summary>
+      <p>Not against the original, since the words differ. Check them against the translation you quoted from.</p>
+    </details>
+
+    <h2 id="free">The free version</h2>
+    <details>
+      <summary>What does the free version do?</summary>
+      <p>It checks every quotation, and shows full results for the first 20 quotations of any manuscript. A one-time in-app purchase unlocks the results for all of them, and the exports. There’s no subscription.</p>
+    </details>
+    <details>
+      <summary>I bought Verbatim on another Mac.</summary>
+      <p>Choose <em>Verbatim › Settings › Restore Purchase</em>, signed in with the same Apple Account.</p>
+    </details>
+
+    <h2 id="contact">Contact</h2>
+    <p>Email <a href="mailto:contact+verbatim@victorshammas.com?subject=Verbatim%20support">contact+verbatim@victorshammas.com</a>. If a result looks wrong, it helps to include the quotation, its citation, and the source’s title and page.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="mailto:contact+verbatim@victorshammas.com">Contact</a></nav>
+    <p>© 2026 Victor Shammas</p>
+  </div>
+</footer>
+</body>
+</html>
